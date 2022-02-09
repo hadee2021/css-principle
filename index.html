@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 원칙</title>
+  <style>
+    body {
+      margin: auto;
+      width: 80%;
+    }
+    .img-position-center {
+      display: flex;
+      justify-content: center;
+    }
+    .textbox {
+      text-align: center;
+      margin: 15px 0;
+    }
+    img {
+      border: 1px solid black;
+      max-width: 60%;
+    }
+    .highlight-deepskyblue {
+      background-color: deepskyblue;
+    }
+    .textcolor-red {
+      color: red;
+    }
+    .textcolor-blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="img-position-center">
+    <img src="./PIC/css 001 개관.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      css의 큰그림은 3가지 영역이다!
+    </span> <br>
+    <span>
+      1. 기본 재료들
+    </span> <br>
+    <span>
+      2. 재료들은 어떻게 배치할 것인가 <br>
+      -> 크기지정 vs 크기지정 X
+    </span> <br>
+    <span>
+      3. 화면크기에 따른 유동성과 요소의 동적임 
+    </span> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 002 요소 부모자식.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      웹에 넣는 요소는 크게 3가지이다 <br>
+      글자, 이미지, 빈칸(너비, 높이 지정 해야함)
+    </span> <br> <br>
+    <span>
+      부모에서 자식으로 스타일이 전달된다 <br>
+      핵심은 스타일이 필요한 대상이 누구냐 이다 <br>
+      부모 -> 부모만 필요하거나 부모,자식 둘다 필요한경우 <br>
+      자식 -> 자식만 필요한 경우
+    </span> <br> <br>
+    <span>
+      스타일의 우선순위는 암기해두자
+    </span> <br>
+    <span>
+      동일한 우선순위는 코드상위치가 아래로 갈 수록 우선적이다
+    </span> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 003 선택자1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      누구에게 스타일을 적용할 것인가 tragetting하는게 선택자이다 <br>
+      보통은 class를 이용하여 선택을 한다
+    </span> <br> <br>
+    <span>
+      기본적으로 선택하는 방법들은 필수임<br>
+    </span> <br> <br>
+    <span>
+      자식태그가 형제들로 나란히 있을때는 <br>
+      기하적으로 선택을 해볼 수 있다 
+    </span> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 004 선택자2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      사용자의 행동조건에 따른 선택자도 있다 <br>
+      예를들면, 커서를 올린다던지, 클릭을한다던지 ,등의 행동
+    </span> <br> <br>
+    <span>
+      사용가능여부는 input태그와 연동하여 사용하기도 한다<br>
+    </span> <br> <br>
+    <span>
+      부정은 그것빼고 적용하는 것인데 <br>
+      이걸 대체할 수 있는 다른 선택자가 없다함
+    </span> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 005 박스1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      박스는 내용요소인 content가 있고<br>
+      내용과 경계사이의 공간인 padding이 있다 <br>
+      padding은 처음에는 없는 공간임을 명심하자 <br><br>
+      마지막으로 박스바깥은 margin이다 <br>
+      margin은 블록의 레벨에따라 처음에 존재유무가 다르다 <br>
+      inline, inline-block은 마진이 없다
+    </span> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 006 박스2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      content -> 내용 요소이다 <br>
+      너비와 높이를 변화시키면 크기변화 하는게 content이다
+    </span> <br> <br>
+    <span>
+      블록의 레벨에 따라 크기가 다르니 알아두자<br>
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 007 박스3.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      padding -> content와 border사이 공간이다 <br>
+      처음에는 무조건 없음을 알아두자
+    </span> <br> <br>
+    <span>
+      padding의 크기변화시 경계의 길이가 변하는 것도 중요함<br>
+    </span> <br> <br>
+    <span>
+      padding의 크기변화시 블록의 레벨에 따라 <br>
+      content의 크기에도 영향을 줄 수 있으니 알아두자
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 008 박스4.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      border -> padding이 없으면 바로 content를 둘러싼다
+    </span> <br> <br>
+    <span>
+      border상 하 좌 우 유무를 이용하면 border중첩현상을 방지 할 수 있다 <br><br>
+      cf) outline은 외곽선인데 outline-offset속성을 음수값을 주면 <br>
+      외곽선을 박스 안으로 사용 할 수 있다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 009 박스5.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      margin -> 박스바깥의 영역이다 <br>
+    </span> <br> <br>
+    <span>
+      양쪽 마진은 서로 중첩되지 안고 밀어낸다<br>
+    </span> <br> <br>
+    <span>
+      상,하 마진은 서로 중첩이되어 겹치게 된다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 010 너비높이.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      너비와 높이는 크기!!! 를 부여하는 매우 중요한 친구들 이다<br>
+    </span> <br> <br>
+    <span>
+      단위는 고정값과 상대값이 있는데<br>
+      무조건 그 크기만 사용하려면 고정값을 쓰면되고 <br>
+      화면이나 다른 요소에 대해 상대적으로 크기를 지정하고 싶으면 <br>
+      상대값을 사용하면 된다
+    </span> <br> <br>
+    <span>
+      상대값은 단위마다 누구를 기준으로 할지 중요하다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 011 max,min.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      너비와 높이의 max,min도 매우 중요하다<br>
+    </span> <br> <br>
+    <span>
+      max,min은 요소에 제한을 거는것으로 가장 우선시된다<br>
+    </span> <br> <br>
+    <span>
+      우선시??!! <br>
+      요소의 크기를 지정할때 여러가지 속성이 겹치게 되는 일이 발생하는데 <br>
+      이 경우에 누가 요소의 크기를 우선적으로 결정하냐가 포인트이다!!
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 012 변수.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      css변수는 전역으로 사용하는 방법과 로컬로 사용하는 방법이 있다<br>
+    </span> <br> <br>
+    <span>
+      전역 -> :root 를 사용하여 지정하고<br>
+      로컬 -> 부모에서 지정하여 자식에서 사용하는 방식이다
+    </span> <br> <br>
+    <span>
+      변수는 색상을 약속된 값으로 사용하는 파렛트에 사용하거나 <br>
+      calc처럼 숫자 계산을 할 때 사용한다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 013 플렉스박스1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      그림에서 약속 하나 하고 가자!! <br>
+      flex를 지정하는 파란색판을 flex판이라 하고 <br>
+      그안의 빨간색 상자는 box라고 하자
+    </span> <br> <br>
+    <span>
+      flex는 공간배치를 수월하게 도와주는데<br>
+      flex판 안의 box크기를 지정한것 vs 크기 지정 안한것 차이가 있다 <br>
+      앞서 크기 지정여부가 중요하다고 강조한 이유가 이런 detail의 차이 때문이다 
+    </span> <br> <br>
+    <span>
+      flex가 배치를 하기 위해서는 당연히 기준이 필요하다!! <br>
+      그 기준이 바로 box의 배열 방향을 결정하는 주축 <br>
+      그리고 주축과 교차하는 방향의 교차축
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 014 플렉스박스2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      flex박스는 크게 2가지 절차가 있다 <br>
+      1st. 순서 <br>
+      2nd. 정렬방법
+    </span> <br> <br>
+    <span>
+      주축의 방향은 가로인가 세로인가 <br>
+      1줄만 -> 박스의 크기합이 flex판보다 큰 경우에는 n등분이된다 <br>
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 015 플렉스박스3.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      2nd. 정렬방법
+    </span> <br> <br>
+    <span>
+      justify = 주축에 대한 정렬 <br>
+      align = 교차축에 대한 정렬<br>
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 016 플렉스박스4.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      주축에 대한 정렬방법은 <br>
+      주로 justify-content를 사용한다
+    </span> <br> <br>
+    <span>
+      정렬의 유형은 사진 참고
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 017 플렉스박스5.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      교차축에 대한 정렬방법은 <br>
+      크게 3가지 방식을 사용한다
+    </span> <br> <br>
+    <span>
+      align-content는 justify-content와 흡사 해보인다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 018 플렉스박스6.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      align-items는 3가지 방식중 많이 사용한다고 한다
+    </span> <br> <br>
+    <span>
+      왜냐, align-content와 달리 start, end, center에서 <br>
+      서로간 간격을 내기 좋기 때문이다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 019 플렉스박스7.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      align-self는 자식에서 사용하는 속성이다
+    </span> <br> <br>
+    <span>
+      플렉스의 보라색 영역에서 각각의 줄마다 내부적으로 배치함
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 020 플렉스박스8.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      box의 크기를 지정하지 안은 경우는 어떨까?? <br>
+      물론 box안의 내용요소들 (예, 문자 )의 크기는 있다 <br>
+      허나, 중요한건 box공간은 별도로 크기를 주지 안은게 핵심이다
+    </span> <br> <br>
+    <span>
+      flex: 1 이라는 속성을 이용하면 <br>
+      flex판의 주축방향을 n등분하여 나눠줄 수 있다 <br>
+      근데, 이렇게 되면 1줄만 box들이 가득차게 된다
+    </span> <br> <br>
+    <span>
+      앞서 배운 min-width를 사용하면 <br>
+      box의 크기는 최소한도 너비를 가지게 되어서 <br>
+      다음줄로 밀려나게 된다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 021 그리드1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      그리드는 컨테이너의 공간을 나눠사용하는 것이다.
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 022 그리드2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      그리드에서도 약속 하나 하자면 <br>
+      빨간색 상자를 gird판이라고 하고 부모요소라 하자 <br>
+      그안에 자식으로 공간이 들어간다 까지
+    </span> <br> <br>
+    <span>
+      그리드 항목공간의 너비와 높이를 지정해주는데 <br>
+      상대값은 fr을 이용하여 비율로 표현 가능하다
+    </span> <br> <br>
+    <span>
+      grid-template-columns는 width와 가로의 의미가 있는데 <br>
+      결국은 1줄에 몇개공간 쓰고 각 공간 너비가 얼마냐를 지정해주는 것이다
+    </span> <br> <br>
+    <span>
+      flex와 구별되는 특징이라면 <br>
+      그리드 항목간에의 간격을 내 맘대로 조정이 가능하다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 023 그리드3.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      여러줄이 있고 마치 셀병합을 한 것 처럼 <br>
+      그리드 항목 공간을 사용하고 싶을 때!!
+    </span> <br> <br>
+    <span>
+      grid-template-area를 사용 할 수 있다
+    </span> <br> <br>
+    <span>
+      "  "를 이용하여 1줄을 표현하고 <br>
+      시각적으로 구성 할 수 있다는 점에서 유용하다  
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 024 컨테이닝 블록.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      부모는 조건이 맞아야 자식을 감쌀 수 있다 <br>
+      그게 아니라면 자식요소의 크기가  큰 경우 <br>
+      부모의 밖으로 넘치는 현상이 발생할 수 있다
+    </span> <br> <br>
+    <span>
+      containing block은 누가 부모인가를 결정 하는 것이다 <br>
+      가령, 크기의 상대단위인 %는 부모를 기준으로 크기를 결정하는데 <br>
+      무조건 상위의 요소가 부모는 아니기 때문이다 <br>
+      그리고 필요하다면 그 상위의 요소가 부모의 역할이 되게 만들어야지 <br>
+      자유자재로 배치 할 수 있다
+    </span> <br> <br>
+    <span>
+      이따 다룰거지만 position 속성을 기준으로 containing block를 정한다 <br>
+      position의 기본값은 static이고 <br>
+      이들은 우리가 흔히 알듯이 상위의 요소가 부모들이다 <br>
+      하지만 absolute는 static이 부모가 될 수 없어서 <br>
+      우리가 아는 상위요소를 부모로 보았다가는 원하는 배치를 하기 힘들어진다 <br>
+      그래서 공식처럼 absolute를 사용하려면 상위요소에 relative를 넣어서 <br>
+      그 상위요소를 부모로 만드는것이 이러한 이유이다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 025 블록포멧팅.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      block formatting context는 어디까지가 자식인가
+    </span> <br> <br>
+    <span>
+      이따 다룰거지만 overflow의 경우 기본값이 visible인데 <br>
+      visible은 자식으로 취급하지 안는다 <br>
+      이런경우에 자식의 요소가 부모 보다 크기가 커서 넘치는경우가 발생함 <br>
+      그래서 overflow를 auto혹은 scroll등으로 바꿔주는 것이다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 026 포지션1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      position은 요소가 위로 떠버린다 <br>
+      css 코드상의 위치가 아래로 갈 수록 더 위로 뜬다 <br>
+      z-index의 높은숫자로 조절가능함
+    </span> <br> <br>
+    <span>
+      position은 주로 자식에 적용을 하는데 <br>
+      절대위치와 상대위치가 있다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 027 포지션2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      사진에서 중요하게 봐야할 포인트는 2가지이다!!
+    </span> <br> <br>
+    <span>
+      1. 누구를 기준으로 위치를 정하는가 <br>
+      2. 다른요소에 영향을 주는가
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 028 overflow.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      overflow는 주로 부모에서 사용하고 <br>
+      자식요소가 넘치는 경우에 어떻게 처리할 것인지를 담당한다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 029 float.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      float는 요소를 띄어서 주로  왼쪽, 중간, 오른쪽에 배치하는 방법이다
+    </span> <br> <br>
+    <span>
+      float는 나머지 요소가 주위에서 감싸는 특징이 있는데 <br>
+      float의 속성값을 주는 순간부터 <br>
+      그 요소는 block formatting context가 되기 때문에 <br>
+      나머지 요소들도 block formatting context로 만들어주면 <br>
+      서로 감싸지 안게 된다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 030 글자.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      글자에서 정렬 부분은 중요한 테크닉이다 <br>
+      가령, 네모박스안에서 글자를 정가운데에 배치하고 싶을때 <br>
+      text-align과 line-height를 사용 할 수 있다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 031 배경1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      배경은 크게 이미지와 색이 있다 <br>
+      배경이미지는 우리가 아는&lt; img &gt; 태그와는 다르다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 032 배경2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      배경이미지는 요소(예, 글자)라는 창틀 뒤에서 보여지는것이다!!
+    </span> <br> <br>
+    <span>
+      이것이 &lt; img &gt; 태그와 다른 점이고 <br>
+      공간의 크기는 요소(예, 글자)가 결정하는 것이다
+    </span> <br> <br>
+    <span>
+      배경이미지랑 요소의 크기랑 다르기떄문에 <br>
+      배경이미지가 모두 안보이거나 <br>
+      배경이미지가 반복되는 현상들이 나타는데 <br>
+      이를 해결하기위한 속성들이 사진의 4가지 속성들이다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 033 그림자.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      그림자는 평면의 요소를 입체적으로 보여지게 하는 <br>
+      매우 중요한 기술중 하나이다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 034 미디어쿼리1.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      너비에 따라 웹페이지의 레이아웃이 바뀐다
+    </span> <br> <br>
+    <span>
+      지원하는 미디어는 크게 모니터와 프린터 정도 참고하자
+    </span> <br> <br>
+    <span>
+      너비의 조건은 max,min-width를 이용해서 제한을 걸고 <br>
+      { } 안에 해당 조건에서의 레이아웃 스타일을 넣어주면 된다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 035 미디어쿼리2.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      다양한 너비마다 조건을 다르게 주고싶을때 <br>
+      미디어 쿼리를 여러개를 사용 할 수 있는데 <br>
+      아래로 갈수록 너비는 작은값을 주고 <br>
+      미디어 쿼리마다 바뀌는 class는 태그에 둘다 써주자
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 036 transform.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      마지막으로 움직임에 대한 스타일이다 <br>
+      요소가 그냥 움직일수도 있고 <br>
+      사용자와 상호작용 (클릭, 접촉)으로 움직인다
+    </span> <br> <br>
+    <span>
+      동적요소의 핵심은 시점에 따라<br>
+      다른 스타일 속성을 적용하여 움직이게 보이는 것이다
+    </span> <br> <br>
+    <span>
+      transform은 요소를 변형시키는 방법을 제시한다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 037 transition.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      transition은 스타일의 속성을 시간에 따라 바꾸어서 <br>
+      마치 애니메이션처럼 보이게 해준다
+    </span> <br> <br>
+    <span>
+      transition을 적용할 선택자에서 <br>
+      어떤속성에 적용할지 정의를 해주고 <br>
+    </span> <br> <br>
+    <span>
+      적용할 선택자:행동조건에서 <br>
+      적용된 속성의 바뀔 값을 적으면 된다
+    </span> <br> <br>
+  </div>
+  <div class="img-position-center">
+    <img src="./PIC/css 038 animation.PNG">
+  </div>
+  <div class="textbox">
+    <span>
+      애니메이션은 특정지점에서 스타일을 바꾸면서 <br>
+      마치 움직이는 것처럼 보여지게 한다
+    </span> <br> <br>
+    <span>
+      애니메이션을 적용할 선택자에서 <br>
+      애니메이션 이름과 실행시간을 정의해주고
+    </span> <br> <br>
+    <span>
+      키프레임을 정의하는 곳에서<br>
+      애니메이션의 이름과 속성값은 시점에 따라 어떻게 바꿀지 정의
+    </span> <br> <br>
+  </div>
+</body>
+</html>
